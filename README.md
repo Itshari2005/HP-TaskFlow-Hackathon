@@ -86,11 +86,11 @@ Taskflow/
 
 ---
 
-## 🎥 Demo Video (Loom)
+## 🎥 Demo Video 
 
 Watch the full walkthrough here:  
-👉 [Loom Video Link](https://www.loom.com/share/your-video-link)
-🔄 UI Update Notice: The user interface shown in the loom video is subject to change as the project evolves and improvements are made.
+👉 [Video Link](https://drive.google.com/file/d/1Zp01zUj6uwfE-wnvKsTq7StDOCLREERf/view?usp=sharing)
+🔄 UI Update Notice: The user interface shown in the video is subject to change as the project evolves and improvements are made.
 
 ---
 
