@@ -21,6 +21,14 @@
   color: #666;
 }
 
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4F46E5;
+  text-decoration: none;
+}
+
 /* Dashboard Main Section */
 .dashboard-section {
   padding: 16px 32px 32px 32px;

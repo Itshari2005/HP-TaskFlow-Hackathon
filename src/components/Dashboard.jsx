@@ -16,8 +16,8 @@ import {
 import EditTaskModal from './EditTaskModal';
 import { FiMoreVertical, FiEdit, FiTrash, FiShare2 } from 'react-icons/fi';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import { LuCalendarDays } from 'react-icons/lu';
-import { useNavigate } from 'react-router-dom';
 import CreateTaskModal from './CreateTaskModal';
 import ShareTaskModal from './ShareTaskModal';
 import axios from 'axios';
@@ -38,8 +38,6 @@ const [priorityFilter, setPriorityFilter] = useState('');
   const [tasks, setTasks] = useState([]);
   const [showShareModal, setShowShareModal] = useState(null);
   const [openMenuId, setOpenMenuId] = useState(null);
-
-  const navigate = useNavigate();
 
   const completedTasks = tasks.filter(t => t.status === 'Completed').length;
   const inProgressTasks = tasks.filter(t => t.status === 'In Progress').length;
@@ -150,7 +148,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
     <div className="full-dashboard">
       <header className="main-header">
         <div className="header-left">
-          <span className="logo" onClick={() => navigate('/')}>HP TaskFlow</span>
+          <Link to="/" className="logo">HP TaskFlow</Link>
         </div>
         <div className="dashboard-icons">
           <MdNotificationsNone size={24} />
@@ -165,7 +163,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
 
       <section className="dashboard-section">
         <div className="dashboard-header-row">
-          <div className="dashboard-title">TaskFlow</div>
+          <div className="dashboard-title">Tasks</div>
         </div>
 
         {/* Cards */}
@@ -236,7 +234,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
 </div>
 
 <p style={{ fontSize: '12px', color: 'gray', marginTop: '10px' }}>
-  *Tip: After creating a task, make sure "All Status" is selected or search your task.
+  Note: After creating a task, select "To-Do" in status filter and select "All Status" for screen refresh or search your task.
 </p>
 
 
