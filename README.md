@@ -94,6 +94,15 @@ Watch the full walkthrough here:
 
 ---
 
+## 🔴 Important Notes
+
+- 🛑 **If a newly created task is not visible:**
+  - Ensure the **"Status" filter** is set to **"All Status"**
+  - Even if **"All Status"** is already selected by default, try **selecting it again manually** to refresh the task list
+  - Or use the **search bar** to locate your task quickly
+    
+---
+
 ## 🚀 Setup Instructions
 
 1. Clone the repo:
