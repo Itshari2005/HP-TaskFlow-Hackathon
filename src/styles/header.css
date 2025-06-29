@@ -1,0 +1,44 @@
+/* styles/header.css */
+.main-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4F46E5;
+  text-decoration: none;
+}
+
+.header-right .nav-btn {
+  margin-left: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  background-color: #4F46E5;
+  color: white;
+  transition: 0.3s;
+}
+
+.header-right .nav-btn:hover {
+  background-color: #4338CA;
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    margin-top: 0.5rem;
+  }
+}

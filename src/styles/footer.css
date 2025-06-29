@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-footer {
+  background-color: #111827;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+
+.main-footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,119 @@
+/* Page Container */
+.login-container {
+  min-height: 90vh;
+  background-color: #F3F4F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Form Card */
+.login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Heading */
+.login-form h2 {
+  color: #1F2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Email & Password Inputs */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #D1D5DB;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Remember Me + Forgot Password Row */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.login-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+}
+
+.forgot-link {
+  color: #4F46E5;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #4338CA;
+}
+
+/* Social OAuth Buttons */
+.oauth-btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.google {
+  background-color: #DB4437;
+}
+
+.github {
+  background-color: #24292E;
+}
+
+/* Sign Up Link */
+.signup-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #1F2937;
+}
+
+.signup-link a {
+  color: #4F46E5;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
