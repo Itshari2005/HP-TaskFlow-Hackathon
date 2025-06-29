@@ -82,7 +82,7 @@ Taskflow/
 
 ## 🧱 Architecture Diagram
 
-![Architecture Diagram](./public/architecture.png)
+![Architecture Diagram](https://drive.google.com/file/d/1WlNowlYM2CiRcLXCdRq8sucseKond4G_/view?usp=sharing)
 
 ---
 
