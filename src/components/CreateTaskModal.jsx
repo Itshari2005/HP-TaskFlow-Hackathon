@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/createTaskModal.css';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-
+import BASE_URL from '../api';
 
 const CreateTaskModal = ({ onClose, onCreate }) => {
   const [title, setTitle] = useState('');
@@ -16,7 +16,7 @@ const CreateTaskModal = ({ onClose, onCreate }) => {
   const newTask = { title, description, status, priority, dueDate };
 
   try {
-    await axios.post('http://localhost:5000/api/tasks/create', newTask);
+    await axios.post(`${BASE_URL}/api/tasks/create`, newTask);
     alert('Task created!');
     onCreate(newTask); // Optional: update local state
     toast.success(`🆕 New task "${title}" added successfully`, {

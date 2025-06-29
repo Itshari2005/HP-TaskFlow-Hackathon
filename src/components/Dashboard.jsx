@@ -21,6 +21,7 @@ import { useNavigate } from 'react-router-dom';
 import CreateTaskModal from './CreateTaskModal';
 import ShareTaskModal from './ShareTaskModal';
 import axios from 'axios';
+import BASE_URL from '../api';
 
 const Dashboard = () => {
   const [sortBy, setSortBy] = useState('createdAt');
@@ -48,7 +49,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tasks', {
+        const res = await axios.get(`${BASE_URL}/api/tasks`, {
           params: {
             page: currentPage,
             limit: 8,
@@ -91,7 +92,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
     const nextStatus = statusFlow[(currentIndex + 1) % statusFlow.length];
 
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`, { status: nextStatus });
+      await axios.put(`${BASE_URL}/api/tasks/${taskId}`, { status: nextStatus });
       setTasks(prev => prev.map(task => task._id === taskId ? { ...task, status: nextStatus } : task));
       const updatedTask = tasks.find(task => task._id === taskId);
       toast.info(`📝 "${updatedTask?.title}" marked as ${nextStatus}`, {
@@ -104,7 +105,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
 
   const updateStatus = async (taskId, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`, { status });
+      await axios.put(`${BASE_URL}/api/tasks/${taskId}`, { status });
       setTasks(prev => prev.map(t => (t._id === taskId ? { ...t, status } : t)));
       const updatedTask = tasks.find(t => t._id === taskId);
       toast.success(`✅ "${updatedTask?.title}" marked as ${status}`);
@@ -116,7 +117,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
 
   const deleteTask = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+      await axios.delete(`${BASE_URL}/api/tasks/${taskId}`);
       setTasks(prev => prev.filter(task => task._id !== taskId));
       toast.info('🗑️ Task deleted');
     } catch (err) {
@@ -131,7 +132,7 @@ const [priorityFilter, setPriorityFilter] = useState('');
 
   const handleUpdateTask = async (updatedTask) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/tasks/${updatedTask._id}`, updatedTask);
+      const res = await axios.put(`${BASE_URL}/api/tasks/${updatedTask._id}`, updatedTask);
       setTasks(prev => prev.map(t => (t._id === updatedTask._id ? res.data : t)));
       setEditingTask(null);
       toast.success(`✏️ "${updatedTask.title}" updated successfully`);

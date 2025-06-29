@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/modal.css';
+import BASE_URL from '../api';
 
 const ShareTaskModal = ({ task, onClose }) => {
   const [email, setEmail] = useState('');
 
   const handleShare = async () => {
     try {
-      await axios.post(`http://localhost:5000/api/tasks/share/${task._id}`, { email });
+      await axios.post(`${BASE_URL}/api/tasks/share/${task._id}`, { email });
       alert('✅ Task shared successfully!');
       onClose();
     } catch (err) {

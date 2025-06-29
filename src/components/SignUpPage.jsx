@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import HeaderSimple from './HeaderSimple';
 import '../styles/signup.css';
+import BASE_URL from '../api';
 
 const SignUpPage = () => {
   const [name, setName] = useState('');
@@ -13,7 +14,7 @@ const SignUpPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', {
+      const res = await axios.post(`${BASE_URL}/api/auth/signup`, {
         name,
         email,
         password,

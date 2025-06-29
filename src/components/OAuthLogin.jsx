@@ -1,10 +1,12 @@
+import BASE_URL from '../api';
+
 const OAuthLogin = () => {
   const handleGoogle = () => {
-    window.location.href = 'http://localhost:5000/api/auth/google';
+    window.location.href = `${BASE_URL}/api/auth/google`;
   };
 
   const handleGitHub = () => {
-    window.location.href = 'http://localhost:5000/api/auth/github';
+    window.location.href = `${BASE_URL}/api/auth/github`;
   };
 
   return (
