@@ -82,7 +82,7 @@ Taskflow/
 
 ## 🧱 Architecture Diagram
 
-![Architecture Diagram](./assets/TaskFlow_Architecture_Diagram.png)
+![Architecture Diagram](src/assets/TaskFlow_Architecture_Diagram.png)
 
 ---
 
