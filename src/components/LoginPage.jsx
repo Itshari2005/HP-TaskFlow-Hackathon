@@ -9,10 +9,11 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const res = await axios.post(`${BASE_URL}/api/auth/login`, {
         email,
@@ -24,6 +25,8 @@ const LoginPage = () => {
       navigate('/dashboard');
     } catch (err) {
       alert(err.response?.data?.message || 'Login failed');
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -57,10 +60,13 @@ const LoginPage = () => {
           </div>
 
           <button type="submit" className="login-btn">Login</button>
+          {loading && (
+            <p className="login-loading-text">🔐 Logging in... Please wait</p>
+          )}
           <hr />
           <p>or login with</p>
-          <button type="button" className="oauth-btn google" onClick={() => window.location.href = 'http://localhost:5000/api/auth/google'}>Sign in with Google</button>
-          <button type="button" className="oauth-btn github" onClick={() => window.location.href = 'http://localhost:5000/api/auth/github'}>Sign in with GitHub</button>
+          <button type="button" className="oauth-btn google" onClick={() => window.location.href = `${BASE_URL}/api/auth/google`}>Sign in with Google</button>
+          <button type="button" className="oauth-btn github" onClick={() => window.location.href = `${BASE_URL}/api/auth/github`}>Sign in with GitHub</button>
 
           <p className="signup-link">
             Don't have an account? <Link to="/signup">Sign up</Link>
