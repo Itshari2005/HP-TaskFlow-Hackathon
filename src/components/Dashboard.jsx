@@ -235,7 +235,9 @@ const [priorityFilter, setPriorityFilter] = useState('');
   </button>
 </div>
 
-
+<p style={{ fontSize: '12px', color: 'gray', marginTop: '10px' }}>
+  *Tip: After creating a task, make sure "All Status" is selected or search your task.
+</p>
 
 
         {/* Task Cards */}
