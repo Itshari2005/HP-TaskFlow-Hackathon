@@ -1,61 +1,88 @@
 .intro-container {
   text-align: center;
+  background-color: #f0f4f8;
   padding: 60px 20px 40px;
-  background: #f9faff;
   min-height: 100vh;
 }
 
 .intro-content {
-  margin-bottom: 60px;
+  max-width: 800px;
+  margin: 0 auto 60px;
 }
 
 .intro-content h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 15px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.highlight {
+  color: #4f46e5; /* darker violet like your image */
 }
 
 .intro-content p {
   font-size: 1.2rem;
   margin-bottom: 25px;
-  color: #666;
+  color: #374151;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #3b82f6;
+  background-color: #4f46e5;
   color: white;
   font-weight: bold;
-  text-decoration: none;
+  padding: 12px 24px;
   border-radius: 8px;
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #4338ca;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #111827;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #f3f4f6;
 }
 
 .features-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* reduced min width */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  padding: 20px;
-  max-width: 900px; 
-  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
 }
 
-
 .feature-card {
-  background-color: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  padding: 30px 20px;
-  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s;
+  text-align: center;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 }
 
 .feature-icon {
@@ -63,9 +90,41 @@
   height: 50px;
   margin: 0 auto 15px;
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #c3dafe, #e9d8fd);
+  color: #4f46e5;
+  background-color: #e0e7ff;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.cta-section {
+  background-color: #4338ca;
+  padding: 50px 20px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f6f8fb;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #f6f8fb;
 }
