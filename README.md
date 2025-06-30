@@ -4,7 +4,7 @@
 
 This project was created as part of a hackathon and focuses on essential project management features such as:
 
-- User authentication via OAuth 2.0 (Google, GitHub, Facebook)
+- User authentication via OAuth 2.0 (Google, GitHub)
 - JWT-based session management
 - Task creation, editing, deletion (CRUD)
 - Pagination, sorting, filtering (by status, priority, search)
