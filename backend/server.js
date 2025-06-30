@@ -43,6 +43,10 @@ app.use(passport.session());
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to TaskFlow Backend API 🚀');
+});
+
 // 8. Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
