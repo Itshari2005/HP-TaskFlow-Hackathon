@@ -17,6 +17,11 @@ This project was created as part of a hackathon and focuses on essential project
 ## 🔗 Live Links
 
 - **Frontend (Vercel)**: [https://hp-task-flow-hackathon.vercel.app](https://hp-task-flow-hackathon.vercel.app)
+
+  ⚠️ Important: Open the above link in new tab
+  🔁 Avoid refreshing or manually visiting inner routes (e.g., /dashboard, /login) as it may cause a 404 Not    Found error due to routing issues. If that happens, simply come back here and click the link again.
+  🧭 Always access the site from the home page and use internal navigation links to explore the app.
+
 - **Backend (Render)**: [https://hp-taskflow-hackathon.onrender.com](https://hp-taskflow-hackathon.onrender.com)
 
 ---
