@@ -161,6 +161,11 @@ Watch the full walkthrough here:
 
 ---
 
+📢 Check out the LinkedIn post for this project:
+👉 [TaskFlow Walkthrough on LinkedIn](https://www.linkedin.com/posts/hari-prashath-22032005h_taskmanagement-reactjs-mongodb-activity-7345380860696698880-v7gb?utm_source=share&utm_medium=member_android&rcm=ACoAAD8-5VMBuGh0BpeC2of-YDrNbOr4vqhWn7M)
+
+---
+
 ## 🏁 Hackathon Declaration
 
 > **This project is a part of a hackathon run by https://www.katomaran.com**
